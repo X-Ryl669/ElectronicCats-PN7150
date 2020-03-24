@@ -71,4 +71,4 @@ jobs:
      with:
       arduino-boards-fqbn: ${{ matrix.arduino-boards-fqbn }}
       platform-url: ${{ matrix.platform-url }}
-      examples-exclude: ${{ matrix.examples-exclude }}
+      examples-build-properties: ${{ toJson(matrix.examples-build-properties) }}
