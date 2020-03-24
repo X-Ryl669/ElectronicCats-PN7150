@@ -30,12 +30,11 @@ jobs:
         arduino-boards-fqbn:
           - arduino:avr:uno
           - arduino:avr:leonardo
-          - arduino:avr:mega
-          - arduino:sam:arduino_due_x
+          - arduino:samd:nano_33_iot
+          - arduino:mbed:nano33ble
           - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
           - esp32:esp32:featheresp32:FlashFreq=80
           - STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
-          - electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
 
         # Specify parameters for each board.
         # Parameters can be: platform-url, examples-exclude and examples-build-properties
