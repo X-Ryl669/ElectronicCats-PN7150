@@ -43,7 +43,7 @@ jobs:
      uses: actions/checkout@master
 
    - name: Compile all examples
-     uses: actions/arduino-test-compile@master
+     uses: ArminJo/arduino-test-compile@master
      with:
       arduino-boards-fqbn: ${{ matrix.arduino-boards-fqbn }}
       platform-url: ${{ matrix.platform-url }}
