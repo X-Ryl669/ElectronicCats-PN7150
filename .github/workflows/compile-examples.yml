@@ -6,13 +6,12 @@ jobs:
 
    strategy:
      matrix:
-       fqbn: [
+       fqbn:
          - arduino:avr:leonardo
          - arduino:avr:uno
          - arduino:samd:mkrwifi1010
          - arduino:samd:nano_33_iot
          - arduino:mbed:nano33ble
-       ]
 
    steps:
      - uses: actions/checkout@master
