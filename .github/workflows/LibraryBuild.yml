@@ -45,25 +45,19 @@ jobs:
           - arduino-boards-fqbn: arduino:avr:uno
 
           - arduino-boards-fqbn: arduino:avr:leonardo
-
-          - arduino-boards-fqbn: arduino:avr:mega
-
-          - arduino-boards-fqbn: arduino:sam:arduino_due_x
-            examples-exclude: QuadrupedControl RobotArmControl # QuadrupedControl RobotArmControl because of missing EEprom
+          
+          - arduino-boards-fqbn: arduino:samd:nano_33_iot
+          
+          - arduino-boards-fqbn: arduino:mbed:nano33ble
 
           - arduino-boards-fqbn: esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
             platform-url: https://arduino.esp8266.com/stable/package_esp8266com_index.json
-            examples-exclude: QuadrupedControl RobotArmControl SpeedTest # SpeedTest because of only one analog input
 
           - arduino-boards-fqbn: esp32:esp32:featheresp32:FlashFreq=80
             platform-url: https://dl.espressif.com/dl/package_esp32_index.json
-            examples-exclude: QuadrupedControl RobotArmControl # Space separated list of (unique substrings of) example names to exclude in build
 
           - arduino-boards-fqbn: STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
             platform-url: https://github.com/stm32duino/BoardManagerFiles/raw/dev/STM32/package_stm_index.json
-
-          - arduino-boards-fqbn: electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
-            platform-url: https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json
 
       # Do not cancel all jobs / architectures if one job fails
       fail-fast: false
