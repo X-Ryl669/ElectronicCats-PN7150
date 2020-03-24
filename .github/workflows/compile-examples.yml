@@ -17,6 +17,6 @@ jobs:
      - uses: actions/checkout@master
 
      - uses: ArminJo/arduino-test-compile@master
-       examples-exclude: DetectingReaders
        with:
          fqbn: ${{ matrix.fqbn }}
+         examples-exclude: DetectingReaders
