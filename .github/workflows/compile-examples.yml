@@ -16,8 +16,8 @@ jobs:
 
    steps:
      - uses: actions/checkout@v1
-       with:
-         fetch-depth: 1
-     - uses: Legion2/arduino-builder-action@v2.0.0
+     
+     - uses: ArminJo/arduino-test-compile@master
+       examples-exclude: DetectingReaders
        with:
          fqbn: ${{ matrix.fqbn }}
