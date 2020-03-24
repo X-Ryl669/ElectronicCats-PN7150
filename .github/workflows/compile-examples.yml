@@ -28,5 +28,5 @@ jobs:
 
      - uses: ArminJo/arduino-test-compile@master
        with:
-         arduino-boards-fqbn: ${{ matrix.fqbn }}
+         arduino-boards-fqbn: ${{ matrix.arduino-boards-fqbn }}
          examples-exclude: DetectingReaders
