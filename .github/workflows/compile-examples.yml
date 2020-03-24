@@ -7,16 +7,16 @@ jobs:
    strategy:
      matrix:
        fqbn: [
-         "arduino:avr:leonardo",
-         "arduino:avr:uno",
-         "arduino:samd:mkrwifi1010",
-         "arduino:samd:nano_33_iot",
-         "arduino:mbed:nano33ble"
+         - arduino:avr:leonardo
+         - arduino:avr:uno
+         - arduino:samd:mkrwifi1010
+         - arduino:samd:nano_33_iot
+         - arduino:mbed:nano33ble
        ]
 
    steps:
-     - uses: actions/checkout@v1
-     
+     - uses: actions/checkout@master
+
      - uses: ArminJo/arduino-test-compile@master
        examples-exclude: DetectingReaders
        with:
