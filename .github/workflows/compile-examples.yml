@@ -6,17 +6,26 @@ jobs:
 
    strategy:
      matrix:
-       fqbn:
+       arduino-boards-fqbn:
          - arduino:avr:leonardo
          - arduino:avr:uno
          - arduino:samd:mkrwifi1010
          - arduino:samd:nano_33_iot
          - arduino:mbed:nano33ble
+         - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
+      
+      include:
+          - arduino-boards-fqbn: esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
+            platform-url: https://arduino.esp8266.com/stable/package_esp8266com_index.json
+            examples-exclude: WhistleSwitch 50Hz SimpleFrequencyDetector 
+
+            - arduino-boards-fqbn: esp32:esp32:featheresp32:FlashFreq=80
+            platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 
    steps:
      - uses: actions/checkout@master
 
      - uses: ArminJo/arduino-test-compile@master
        with:
-         fqbn: ${{ matrix.fqbn }}
+         arduino-boards-fqbn: ${{ matrix.fqbn }}
          examples-exclude: DetectingReaders
