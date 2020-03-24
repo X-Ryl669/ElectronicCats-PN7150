@@ -8,12 +8,12 @@ jobs:
    strategy:
      matrix:
        arduino-boards-fqbn:
-         - arduino:avr:uno
-         - arduino:avr:leonardo
-         - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
-         - esp32:esp32:featheresp32:FlashFreq=80
-         - STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
-         - electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
+        - arduino:avr:uno
+        - arduino:avr:leonardo
+        - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
+        - esp32:esp32:featheresp32:FlashFreq=80
+        - STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
+        - electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
 
        include:
          - arduino-boards-fqbn: arduino:avr:uno
