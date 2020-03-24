@@ -15,6 +15,7 @@ jobs:
          - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
          - esp32:esp32:featheresp32:FlashFreq=80
          - STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
+         - electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
        include:
          - arduino-boards-fqbn: esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
            platform-url: https://arduino.esp8266.com/stable/package_esp8266com_index.json
@@ -22,6 +23,8 @@ jobs:
            platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
          - arduino-boards-fqbn: STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
            platform-url: https://github.com/stm32duino/BoardManagerFiles/raw/dev/STM32/package_stm_index.json
+         - arduino-boards-fqbn: electroniccats:samd:electroniccats_Bast_Pro_Mini_M0
+           platform-url: https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json
    
      fail-fast: false
    
