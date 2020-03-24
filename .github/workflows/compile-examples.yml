@@ -9,8 +9,6 @@ jobs:
        arduino-boards-fqbn:
          - arduino:avr:leonardo
          - arduino:avr:uno
-         - arduino:samd:nano_33_iot
-         - arduino:mbed:nano33ble
          - esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
          - esp32:esp32:featheresp32:FlashFreq=80
          - STM32:stm32:GenF1:pnum=BLUEPILL_F103C8
@@ -18,8 +16,6 @@ jobs:
        include:
          - arduino-boards-fqbn: arduino:avr:uno
          - arduino-boards-fqbn: arduino:avr:leonardo
-         - arduino-boards-fqbn: arduino:samd:nano_33_iot
-         - arduino-boards-fqbn: arduino:mbed:nano33ble
          - arduino-boards-fqbn: esp8266:esp8266:huzzah:eesz=4M3M,xtal=80
            platform-url: https://arduino.esp8266.com/stable/package_esp8266com_index.json
          - arduino-boards-fqbn: esp32:esp32:featheresp32:FlashFreq=80
